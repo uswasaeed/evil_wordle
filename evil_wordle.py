@@ -166,8 +166,8 @@ class WordFamily:
         """
         if not isinstance(other, WordFamily):
             raise NotImplementedError("< operator only valid for WordFamily comparisons.")
-        return (self.difficulty, -len(self.words), self.feedback_colors) < (
-            other.difficulty, -len(other.words), other.feedback_colors
+        return (-len(self.words), self.difficulty, self.feedback_colors) < (
+            -len(other.words), other.difficulty, other.feedback_colors
         )
 
 
